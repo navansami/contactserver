@@ -51,6 +51,12 @@ const contactSchema = new mongoose.Schema({
         required:   false,
         unique:     false
     },
+    active: {
+        type:       Boolean,
+        required:   true,
+        unique:     false,
+        default:    false
+    },
     clicks: {
         type:       Number,
         required:   false,
