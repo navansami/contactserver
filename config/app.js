@@ -5,6 +5,7 @@ const cors = require("cors")
 const app = express()
 
 const contactRouter = require('../routes/contacts')
+const authRouter = require('../routes/auth')
 
 // Middle Ware
 app.use(cors("*"))
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
     })
 })
 
+app.use("/api/v1/contacts/", authRouter)
 app.use("/api/v1/contacts/", contactRouter)
 
 module.exports = app

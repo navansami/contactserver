@@ -3,7 +3,7 @@ const contactCtl = require('../controllers/contacts')
 
 router
     .route('/')
-    .get(contactCtl.getContacts)
+    .get(contactCtl.getAllContacts)
     .post(contactCtl.addContact)
 
 router

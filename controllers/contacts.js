@@ -1,6 +1,13 @@
 const Contact = require('../models/Contact')
 
-exports.getContacts = async (req, res) => {
+/*
+    DESIGN DECISION:
+    The contacts stored will not be more than 1000 contacts
+    and given the use of this app, will do the pagination
+    on the front end and send all contacts to store in cache
+*/
+
+exports.getAllContacts = async (req, res) => {
     try {
         const contacts = await Contact.find()
 
