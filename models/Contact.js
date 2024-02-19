@@ -46,6 +46,11 @@ const contactSchema = new mongoose.Schema({
         required:   false,
         unique:     false
     },
+    [tags]: {
+        type:       String,
+        required:   false,
+        unique:     false
+    },
     clicks: {
         type:       Number,
         required:   false,
